@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "ddacf8b1-32f2-44b0-9b53-7091cb3a7434",
+		"name": "course selection system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39598118"
+	},
+	"item": [
+		{
+			"name": "register faculty",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"F001\",\r\n    \"name\": \"Test Faculty\",\r\n    \"password\": \"password123\",\r\n    \"address\": \"123 Street\",\r\n    \"role\": \"faculty\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://course-selection-system.onrender.com/api/auth/register",
+					"protocol": "https",
+					"host": [
+						"course-selection-system",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"S001\",\r\n    \"name\": \"Test Student\",\r\n    \"password\": \"password123\",\r\n    \"address\": \"456 Street\",\r\n    \"role\": \"student\",\r\n    \"academicYear\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://course-selection-system.onrender.com/api/auth/register",
+					"protocol": "https",
+					"host": [
+						"course-selection-system",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"F001\",\r\n    \"password\": \"password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://course-selection-system.onrender.com/api/auth/login",
+					"protocol": "https",
+					"host": [
+						"course-selection-system",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create course",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJGMDAxIiwicm9sZSI6ImZhY3VsdHkiLCJpYXQiOjE3MzYwMTQ5NjgsImV4cCI6MTczNjAxNTU2OH0.dlVp1ZH6-JFs-Oo4Onam_REPLK44_R1A7jFMPWkPYx0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"courseId\": \"CS101\",\r\n    \"name\": \"Programming\",\r\n    \"lecturerName\": \"Test Faculty\",\r\n    \"credits\": 3,\r\n    \"maxStudents\": 30\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://course-selection-system.onrender.com/api/courses",
+					"protocol": "https",
+					"host": [
+						"course-selection-system",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get courses",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJGMDAxIiwicm9sZSI6ImZhY3VsdHkiLCJpYXQiOjE3MzYwMTQ5NjgsImV4cCI6MTczNjAxNTU2OH0.dlVp1ZH6-JFs-Oo4Onam_REPLK44_R1A7jFMPWkPYx0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://course-selection-system.onrender.com/api/courses",
+					"protocol": "https",
+					"host": [
+						"course-selection-system",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
